@@ -1,8 +1,8 @@
 streamlit>=1.32.0
-langchain>=0.3.0
-langchain-google-genai>=2.0.0
-langchain-community>=0.3.0
-langchain-core>=0.3.0
+langchain>=1.2.0
+langchain-google-genai>=4.2.0
+langchain-community>=0.4.0
+langchain-core>=1.2.0
 langgraph>=0.2.0
 langsmith>=0.1.0
 sqlite-vec>=0.1.1
