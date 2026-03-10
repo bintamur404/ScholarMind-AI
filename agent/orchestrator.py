@@ -34,5 +34,5 @@ def get_agent_executor():
     )
 
     # Compile the LangGraph agent
-    agent = create_react_agent(llm, tools, state_modifier=system_prompt)
+    agent = create_react_agent(llm, tools, prompt=system_prompt)
     return agent
