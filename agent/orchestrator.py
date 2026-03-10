@@ -18,7 +18,7 @@ def get_agent_executor():
     """Builds the ScholarMind agent using Google Gemini."""
     
     # Initialize Google Gemini
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro", temperature=0)
+    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0)
 
     # Tool list
     tools = [ocr_tool, web_search_tool, rag_search_tool]
