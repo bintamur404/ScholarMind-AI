@@ -7,8 +7,8 @@ from langchain_google_genai import GoogleGenerativeAIEmbeddings
 class SQLiteVectorDB:
     def __init__(self, db_path: str = "scholar_mind.db"):
         self.db_path = db_path
-        # Use Google Gemini Embeddings (API-based, more stable on Windows)
-        self.embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
+        # Use Google Gemini Embeddings (Verified models/gemini-embedding-001 is available)
+        self.embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
         self.vector_dim = 768  # Dimension for text-embedding-004
         self.init_db()
 
