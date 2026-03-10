@@ -2,14 +2,14 @@ import sqlite3
 import sqlite_vec
 import struct
 from typing import List, Tuple
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
 class SQLiteVectorDB:
     def __init__(self, db_path: str = "scholar_mind.db"):
         self.db_path = db_path
-        # Use a lightweight sentence-transformer model for local embeddings
-        self.embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-        self.vector_dim = 384  # Dimension for all-MiniLM-L6-v2
+        # Use Google Gemini Embeddings (API-based, more stable on Windows)
+        self.embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
+        self.vector_dim = 768  # Dimension for text-embedding-004
         self.init_db()
 
     def get_connection(self):
